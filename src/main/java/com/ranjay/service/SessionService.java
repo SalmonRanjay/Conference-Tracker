@@ -14,14 +14,16 @@ public class SessionService {
     }
 
     public int addEventToSession(ConferenceEvent event, List<ConferenceEvent> events, int TOTALSESSIONDURATION, int currentDurationSession){
-        int isSessionFull = TOTALSESSIONDURATION - currentDurationSession;
-        if( isSessionFull > 0){
+        int remainingSessionCapacity = TOTALSESSIONDURATION -  currentDurationSession  ;
+        boolean isSessionFull = remainingSessionCapacity < event.getDuration();
+
+        if( !isSessionFull ){
             // add session to events list
             events.add(event);
             currentDurationSession += event.getDuration();
             sessionMediator.setEventSuccessStatus(true);
         }
-        else if( isSessionFull <= 0 ){
+        else {
             // Session is full signal to mediator to start using evening session
             System.out.println("Session is full");
         }
