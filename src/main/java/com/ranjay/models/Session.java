@@ -6,12 +6,13 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class MorningSession {
+public class Session {
     private List<ConferenceEvent> events;
     private static final int TOTALSESSIONDURATION = 180;
     private int currentDurationSession;
+    private SessionType type;
 
-    public MorningSession(){
+    public Session(){
         events = new ArrayList<>();
         currentDurationSession = 0;
     }

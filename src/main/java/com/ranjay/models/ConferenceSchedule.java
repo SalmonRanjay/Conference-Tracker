@@ -6,5 +6,5 @@ import lombok.Data;
 
 @Data
 public class ConferenceSchedule {
-    private List<Tracks> conferenceTracks;
+    private List<Track> conferenceTracks;
 }

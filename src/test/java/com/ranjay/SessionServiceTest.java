@@ -3,15 +3,16 @@ package com.ranjay;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import com.ranjay.mediators.SessionMediator;
 import com.ranjay.models.ConferenceEvent;
-import com.ranjay.models.MorningSession;
+import com.ranjay.models.Session;
 import com.ranjay.service.SessionService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class SessionServiceTest {
-    private MorningSession session;
+    private Session session;
     private SessionService sessionService;
     private ConferenceEvent event;
     private int sessionDuration ;
@@ -19,9 +20,9 @@ public class SessionServiceTest {
 
     @BeforeEach
     public void init(){
-        session = new MorningSession();
+        session = new Session();
         event = new ConferenceEvent("Test Event", 45);
-        sessionService = new SessionService();
+        sessionService = new SessionService(new SessionMediator());
         
 
     }
