@@ -19,13 +19,19 @@ public class SessionService {
 
         if( !isSessionFull ){
             // add session to events list
-            events.add(event);
-            currentDurationSession += event.getDuration();
-            sessionMediator.setEventSuccessStatus(true);
+            if( (TOTALSESSIONDURATION == 180) && (event.getDuration() == 5) ){
+                // skip adding to morning session
+                return currentDurationSession;
+            }else{
+                events.add(event);
+                currentDurationSession += event.getDuration();
+                sessionMediator.setEventSuccessStatus(true);
+            }
         }
         else {
             // Session is full signal to mediator to start using evening session
-            System.out.println("Session is full");
+            // System.out.println("Session is full");
+            sessionMediator.setEventSuccessStatus(false);
         }
         return currentDurationSession;
     }

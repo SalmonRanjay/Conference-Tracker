@@ -25,6 +25,7 @@ public class App
         // Collections.sort(events);
         // create track one object
         Track firstTrack = new Track(sessionMediator);
+        Track secondTrack = new Track(sessionMediator);
         firstTrack.loadTrackData(events);
 
         System.out.println(" \n \n ============ Morning SESSION ======================");
@@ -35,11 +36,17 @@ public class App
         for (ConferenceEvent conferenceEvent : firstTrack.getAfternoonSession().getEvents()) {
             System.out.println(conferenceEvent.toString());
         }
+        secondTrack.loadTrackData(events);
+
+        System.out.println(" \n \n ============ second Track Morning SESSION ======================");
+        for (ConferenceEvent conferenceEvent : secondTrack.getMorningSession().getEvents()) {
+            System.out.println(conferenceEvent.toString());
+        }
+        System.out.println(" \n \n ============ second Track EVENING SESSION ======================");
+        for (ConferenceEvent conferenceEvent : secondTrack.getAfternoonSession().getEvents()) {
+            System.out.println(conferenceEvent.toString());
+        }
         
-        // create track two object
-
-        // iterate over list fill track one object, filling morning session first then afternoon session
-
-        // delete item from list once it's added to a session
+       System.out.println(events.size());
     }
 }

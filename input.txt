@@ -6,6 +6,7 @@ Java 8, Really end of life 45min
 Managing Networking Latency 60min
 BDD Gone Mad 45min
 Spring JuJu 60min
+From Java 8 to Java 12 lightning
 Effective DSL (Domain Specific Languages) 60min
 Clojure...what Happend (on My Project) 45min
 Backends and FrontEnds in Javascript? 30min

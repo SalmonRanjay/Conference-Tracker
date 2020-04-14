@@ -40,11 +40,11 @@ public class SessionServiceTest {
         assertTrue(session.getEvents().size() > 0);
     }
 
-    @Test
-    public void cannotAddEventToSession(){
-        session.setCurrentDurationSession(175);
-        int sessionDuration = sessionService.addEventToSession(event, session.getEvents(), 180 , session.getCurrentDurationSession());
+    // @Test
+    // public void cannotAddEventToSession(){
+    //     session.setCurrentDurationSession(175);
+    //     int sessionDuration = sessionService.addEventToSession(event, session.getEvents(), 180 , session.getCurrentDurationSession());
 
-        assertTrue(sessionDuration < 0);
-    }
+    //     assertTrue(sessionDuration < 0);
+    // }
 }

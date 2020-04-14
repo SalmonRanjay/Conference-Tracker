@@ -18,18 +18,25 @@ public class ConferenceInitializer {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.length() > 11) {
-                    String durationText = line.substring(line.length() - 6).substring(0, 3).trim();
-                    String title = line.substring(0, line.indexOf("min") - 3);
-                    Integer duration = Integer.parseInt(durationText);
+                    String durationText = "";
+                    String title = "";
+                    int duration = 0;
+                    if (line.substring(line.length() - 11).contains("lightning")) {
+                        title = line.substring(0, line.indexOf("lightning"));
+                        duration = 5;
+                    } else {
+                        durationText = line.substring(line.length() - 6).substring(0, 3).trim();
+                        title = line.substring(0, line.indexOf("min") - 3);
+                        duration = Integer.parseInt(durationText);
+                    }
                     events.add(new ConferenceEvent(title, duration));
                 }
-              
+
             }
-            
+
         } catch (IOException e) {
             System.err.format("IOException: %s%n", e);
-        }
-        catch( NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println(e.getMessage());
         }
         return events;
