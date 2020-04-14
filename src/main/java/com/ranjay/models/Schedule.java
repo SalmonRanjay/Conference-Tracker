@@ -5,6 +5,6 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class ConferenceSchedule {
+public class Schedule {
     private List<Track> conferenceTracks;
 }

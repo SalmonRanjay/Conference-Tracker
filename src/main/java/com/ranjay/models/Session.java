@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 public class Session {
-    private List<ConferenceEvent> events;
+    private List<Event> events;
     private static final int TOTALSESSIONDURATION = 180;
     private int currentDurationSession;
     private SessionType type;

@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.ranjay.mediators.ISessionMediator;
 import com.ranjay.mediators.SessionMediator;
-import com.ranjay.models.ConferenceEvent;
+import com.ranjay.models.Event;
 import com.ranjay.models.Track;
 import com.ranjay.service.ConferenceInitializer;
 
@@ -20,7 +20,7 @@ public class App
     {
         
         ConferenceInitializer initializer = new ConferenceInitializer();
-        List<ConferenceEvent> events = initializer.initializeEVents("input.txt");
+        List<Event> events = initializer.initializeEVents("input.txt");
         ISessionMediator sessionMediator = new SessionMediator();
         // Collections.sort(events);
         // create track one object
@@ -29,21 +29,21 @@ public class App
         firstTrack.loadTrackData(events);
 
         System.out.println(" \n \n ============ Morning SESSION ======================");
-        for (ConferenceEvent conferenceEvent : firstTrack.getMorningSession().getEvents()) {
+        for (Event conferenceEvent : firstTrack.getMorningSession().getEvents()) {
             System.out.println(conferenceEvent.toString());
         }
         System.out.println(" \n \n ============ EVENING SESSION ======================");
-        for (ConferenceEvent conferenceEvent : firstTrack.getAfternoonSession().getEvents()) {
+        for (Event conferenceEvent : firstTrack.getAfternoonSession().getEvents()) {
             System.out.println(conferenceEvent.toString());
         }
         secondTrack.loadTrackData(events);
 
         System.out.println(" \n \n ============ second Track Morning SESSION ======================");
-        for (ConferenceEvent conferenceEvent : secondTrack.getMorningSession().getEvents()) {
+        for (Event conferenceEvent : secondTrack.getMorningSession().getEvents()) {
             System.out.println(conferenceEvent.toString());
         }
         System.out.println(" \n \n ============ second Track EVENING SESSION ======================");
-        for (ConferenceEvent conferenceEvent : secondTrack.getAfternoonSession().getEvents()) {
+        for (Event conferenceEvent : secondTrack.getAfternoonSession().getEvents()) {
             System.out.println(conferenceEvent.toString());
         }
         

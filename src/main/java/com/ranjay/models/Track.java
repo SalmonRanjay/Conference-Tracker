@@ -20,16 +20,16 @@ public class Track {
         this.afternoonSession = new Session();
     }
 
-    public void loadTrackData(List<ConferenceEvent> events){
+    public void loadTrackData(List<Event> events){
         SessionService service = new SessionService(this.sessionMediator);
         populateSession(events, service, this.morningSession,180,SessionType.MORNING);
         populateSession(events, service, this.afternoonSession,240,SessionType.AFTERNOON);
     }
 
-    private void populateSession(List<ConferenceEvent> events, SessionService service, Session session, int MaxSessionCapacity, SessionType sessionType) {
-        Iterator<ConferenceEvent> iter = events.iterator();
+    private void populateSession(List<Event> events, SessionService service, Session session, int MaxSessionCapacity, SessionType sessionType) {
+        Iterator<Event> iter = events.iterator();
         while (iter.hasNext()) {
-            ConferenceEvent conferenceEvent = iter.next();
+            Event conferenceEvent = iter.next();
             session.setCurrentDurationSession(service.addEventToSession(conferenceEvent, session.getEvents(), MaxSessionCapacity, session.getCurrentDurationSession()));
             if(sessionMediator.eventAddedSuccessfylly()){
                 iter.remove();

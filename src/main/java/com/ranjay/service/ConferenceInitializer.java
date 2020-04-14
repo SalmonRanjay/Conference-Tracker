@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ranjay.models.ConferenceEvent;
+import com.ranjay.models.Event;
 
 public class ConferenceInitializer {
     // From Java 8 to Java 12 l​ightning
-    public List<ConferenceEvent> initializeEVents(String filePath) {
+    public List<Event> initializeEVents(String filePath) {
 
-        List<ConferenceEvent> events = new ArrayList<>();
+        List<Event> events = new ArrayList<>();
         try (FileReader reader = new FileReader(filePath); BufferedReader br = new BufferedReader(reader)) {
             // read line by line
             String line;
@@ -29,7 +29,7 @@ public class ConferenceInitializer {
                         title = line.substring(0, line.indexOf("min") - 3);
                         duration = Integer.parseInt(durationText);
                     }
-                    events.add(new ConferenceEvent(title, duration));
+                    events.add(new Event(title, duration));
                 }
 
             }

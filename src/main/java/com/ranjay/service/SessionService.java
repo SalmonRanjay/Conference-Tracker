@@ -3,7 +3,7 @@ package com.ranjay.service;
 import java.util.List;
 
 import com.ranjay.mediators.ISessionMediator;
-import com.ranjay.models.ConferenceEvent;
+import com.ranjay.models.Event;
 
 public class SessionService {
 
@@ -13,7 +13,7 @@ public class SessionService {
         this.sessionMediator = sessionMediator;
     }
 
-    public int addEventToSession(ConferenceEvent event, List<ConferenceEvent> events, int TOTALSESSIONDURATION, int currentDurationSession){
+    public int addEventToSession(Event event, List<Event> events, int TOTALSESSIONDURATION, int currentDurationSession){
         int remainingSessionCapacity = TOTALSESSIONDURATION -  currentDurationSession  ;
         boolean isSessionFull = remainingSessionCapacity < event.getDuration();
 

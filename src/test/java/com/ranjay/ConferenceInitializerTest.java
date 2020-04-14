@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
-import com.ranjay.models.ConferenceEvent;
+import com.ranjay.models.Event;
 import com.ranjay.service.ConferenceInitializer;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +22,7 @@ public class ConferenceInitializerTest {
 
     @Test
     public void initializeEVentsTest(){
-        List<ConferenceEvent> events = initializer.initializeEVents("input.txt");
+        List<Event> events = initializer.initializeEVents("input.txt");
         assertNotNull(events);
         assertTrue(events.size() > 0);
     }
