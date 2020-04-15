@@ -34,27 +34,11 @@ public class App
         conferenceSchedule.addTrackToConference(firstTrack);
         conferenceSchedule.addTrackToConference(secondTrack);
         conferenceSchedule.setUpSchedule();
-        conferenceSchedule.printSchedule();
+        // conferenceSchedule.printSchedule();
+        conferenceSchedule.printScheduleByTrack();
 
         
-        // System.out.println(" \n \n ============ Morning SESSION ======================");
-        // for (Event conferenceEvent : firstTrack.getMorningSession().getEvents()) {
-        //     System.out.println(conferenceEvent.toString());
-        // }
-        // System.out.println(" \n \n ============ EVENING SESSION ======================");
-        // for (Event conferenceEvent : firstTrack.getAfternoonSession().getEvents()) {
-        //     System.out.println(conferenceEvent.toString());
-        // }
-        // secondTrack.loadTrackData(events);
-
-        // System.out.println(" \n \n ============ second Track Morning SESSION ======================");
-        // for (Event conferenceEvent : secondTrack.getMorningSession().getEvents()) {
-        //     System.out.println(conferenceEvent.toString());
-        // }
-        // System.out.println(" \n \n ============ second Track EVENING SESSION ======================");
-        // for (Event conferenceEvent : secondTrack.getAfternoonSession().getEvents()) {
-        //     System.out.println(conferenceEvent.toString());
-        // }
+      
         
        System.out.println(events.size());
     }
