@@ -25,12 +25,6 @@ public class App {
         List<Event> events = initializer.initializeEVents("input.txt");
         ISessionMediator sessionMediator = new SessionMediator();
         ITrackMediator trackMediator = new TrackMediator();
-        // Collections.sort(events);
-        // create track one object
-        // Track firstTrack = new Track(sessionMediator, trackMediator);
-        // Track secondTrack = new Track(sessionMediator, trackMediator);
-        // firstTrack.loadTrackData(events);
-        // secondTrack.loadTrackData(events);
 
         Schedule conferenceSchedule = new Schedule();
 
@@ -48,12 +42,8 @@ public class App {
             }
 
         } while (iter.hasNext());
-
-      
-        conferenceSchedule.setUpSchedule();
         
+        conferenceSchedule.setUpSchedule();
         conferenceSchedule.printScheduleByTrack();
-
-        System.out.println(events.size());
     }
 }

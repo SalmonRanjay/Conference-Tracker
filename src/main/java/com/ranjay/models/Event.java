@@ -3,7 +3,7 @@ package com.ranjay.models;
 import lombok.Data;
 
 @Data
-public class Event implements Comparable {
+public class Event implements Comparable<Event> {
 
     private String title;
     private int duration;
@@ -14,9 +14,7 @@ public class Event implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        // TODO Auto-generated method stub
-        Event event = (Event) o;
+    public int compareTo(Event event) {
         return -(this.duration - event.getDuration());
     }
 

@@ -42,12 +42,6 @@ public class Track {
             }
         }
         session.setType(sessionType);
-        // for (ConferenceEvent conferenceEvent : events) {
-        //     session.setCurrentDurationSession(service.addEventToSession(conferenceEvent, session.getEvents(), MaxSessionCapacity, session.getCurrentDurationSession()));
-        //     if(sessionMediator.eventAddedSuccessfylly()){
-        //         events.remove(conferenceEvent);
-        //         sessionMediator.setEventSuccessStatus(false);
-        //     }
-        // }
+       
     }
 }   

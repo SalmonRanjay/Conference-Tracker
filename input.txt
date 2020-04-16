@@ -13,3 +13,10 @@ Backends and FrontEnds in Javascript? 30min
 CD on the Mainframe 60min
 Making Windows Development Enjoyable... 30min
 Modern Build Systems 30min
+Experts provide insights into tools such as TensorFlow, cognitive cloud services, APIs etc for Java, C# and JavaScript. 60min
+TensorFlow 60min
+Speech, Gesture & Character Recognition 45min
+Torch / PyTorch Natural Language Processing 30min
+Towards a Convenient ML Infra 60min
+Entity Recognition & Text Extraction 30min
+Applying Machine Learning Online at Scale 30min
