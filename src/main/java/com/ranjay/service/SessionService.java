@@ -29,8 +29,7 @@ public class SessionService {
             }
         }
         else {
-            // Session is full signal to mediator to start using evening session
-            // System.out.println("Session is full");
+           
             sessionMediator.setEventSuccessStatus(false);
         }
         return currentDurationSession;
